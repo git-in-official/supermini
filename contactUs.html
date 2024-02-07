@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact SUPERMINI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="contactUs">
+    <header id="style1">
+      <a class="logo" href=""><img src="/images/Supermini_Logo.svg" /></a>
+      <div class="menubar">
+        <ul>
+          <li><a href="">SUPERMINI.A 소개</a></li>
+          <li><a href="">포트폴리오</a></li>
+          <li><a href="">프로젝트 안내</a></li>
+        </ul>
+        <button href="">
+          <a>프로젝트 의뢰하기</a>
+        </button>
+      </div>
+    </header>
+    <div class="banner-container">
+      <div class="banner-inner">
+        <div class="inner-left">
+          <h1>프로젝트 의뢰</h1>
+          <h2>SUPERMINI는 여러분의 멋진 선택과 함께합니다.</h2>
+          <h3>아래 양식으로 문의주세요. 2일 이내에 연락드리겠습니다.</h3>
+        </div>
+        <div class="inner-right">
+          <img src="/images/contact_us.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- onsubmit은 나중에 자바스크립트로 필수입력칸과 관련된 코드실행예정 -->
+    <form
+      action="서버url"
+      method="post"
+      autocomplete="off"
+      enctype="multipart/form-data"
+      onsubmit="return request()"
+    >
+      <h3>고객 기본 정보</h3>
+      <ul class="input-container">
+        <li>
+          <div class="input-wrapper">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="client" />
+              <span class="label">의뢰자 *</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </li>
+        <li>
+          <div class="input-wrapper">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="company" />
+              <span class="label">기업명 *</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </li>
+        <li>
+          <div class="input-wrapper">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="tel" />
+              <span class="label">연락처 *</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </li>
+        <li>
+          <div class="input-wrapper">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="email" />
+              <span class="label">이메일 *</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </li>
+      </ul>
+      <h3>의뢰사항</h3>
+      <label for="selectOption" class="select-wrapper">
+        <select name="requestCategory" id="selectOption" class="option-bar">
+          <option value="option1">홈페이지 / 모바일웹 제작</option>
+          <option value="option2">웹/앱 디자인</option>
+          <option value="option3">검색엔진 최적화 / 유지보수</option>
+          <option value="option4">IR DECK / 제안서 제작</option>
+          <option value="option5">사업전략 컨설팅</option>
+        </select>
+      </label>
+      <ul id="list1" class="options-list" style="display: none">
+        <li>
+          <div class="input-wrapper">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="client" />
+              <span class="label">예상 분량 *</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </li>
+        <li>
+          <div class="input-wrapper">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="company" />
+              <span class="label">구독모델 선택 *</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </li>
+        <li>
+          <div class="input-wrapper">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="tel" />
+              <span class="label">참고 사이트 *</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </li>
+        <li>
+          <div class="input-wrapper">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="email" />
+              <span class="label">보유 도메인 *</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </li>
+      </ul>
+      <ul id="list2" class="options-list" style="display: none">
+        <li>
+          <div class="input-wrapper">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="client" />
+              <span class="label">예상 분량 *</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </li>
+        <li>
+          <div class="input-wrapper">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="company" />
+              <span class="label">사업분야 *</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </li>
+        <li>
+          <div class="input-wrapper">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="tel" />
+              <span class="label">참고 사이트 *</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </li>
+        <li>
+          <div class="input-wrapper">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="email" />
+              <span class="label">보유 도메인 *</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </li>
+      </ul>
+      <ul id="list3" class="options-list" style="display: none">
+        <li>
+          <div class="input-wrapper">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="client" />
+              <span class="label">보유 도메인 *</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </li>
+      </ul>
+      <ul id="list4" class="options-list" style="display: none">
+        4
+      </ul>
+      <ul id="list5" class="options-list" style="display: none">
+        5
+      </ul>
+    </form>
+    <footer id="style2">
+      <svg viewBox="0 0 120 28">
+        <defs>
+          <mask id="xxx">
+            <circle cx="7" cy="12" r="40" fill="#fff" />
+          </mask>
+
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="
+                   1 0 0 0 0  
+                   0 1 0 0 0  
+                   0 0 1 0 0  
+                   0 0 0 13 -9"
+              result="goo"
+            />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+          <path
+            id="wave"
+            d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z"
+          />
+        </defs>
+
+        <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2"></use>
+        <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0"></use>
+
+        <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+      </svg>
+
+      <div class="footer-container">
+        <div class="footer-top">
+          <ul>
+            <span class="title">회사주소</span>
+            <li>
+              <span class="germany">[독일본사]</span
+              ><span class="content">Gerhofstraße 38 20354 Hamburg</span>
+            </li>
+            <li>
+              <span class="korea">[한국지사]</span
+              ><span class="content">서울특별시 동대문구 휘경동 60</span>
+            </li>
+          </ul>
+          <ul>
+            <span class="title">TEL.</span>
+            <li>
+              <span class="germany">[독일본사]</span
+              ><span class="content">+49 177 6323293</span>
+            </li>
+            <li>
+              <span class="korea">[한국지사]</span
+              ><span class="content">010-2607-7548</span>
+            </li>
+          </ul>
+          <ul>
+            <span class="title">E-MAIL</span>
+            <li>
+              <span class="germany">[독일본사]</span
+              ><span class="content">office@supermini.archi</span>
+            </li>
+            <li>
+              <span class="korea">[한국지사]</span
+              ><span class="content">dasawafa@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-wrapper">
+            <a href="" class="logo"
+              ><img src="/images/Supermini_Logo.svg" alt=""
+            /></a>
+          </div>
+          <div class="footer-bottom-wrapper"></div>
+          <div class="footer-bottom-wrapper">
+            <p>@ 2023 SUPERMINI.A. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/ulOnOff.js"></script>
+  </body>
+</html>

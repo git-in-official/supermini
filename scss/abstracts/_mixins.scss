@@ -18,3 +18,7 @@
     transform: translateY(-50%);
   }
 }
+
+@mixin background-image($image-url) {
+  background-image: url($image-url);
+}

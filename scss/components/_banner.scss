@@ -1,0 +1,12 @@
+.banner-container {
+  @include background-image("");
+  margin-left: auto;
+  margin-right: auto;
+  width: vw(1200);
+  height: vw(300); // Default height, adjust as needed
+  background-size: cover;
+  background-position: center;
+  border-radius: vw(30);
+  position: relative;
+  margin-top: vw(5);
+}

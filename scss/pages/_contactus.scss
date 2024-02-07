@@ -1,0 +1,73 @@
+.contactUs {
+  .banner-container {
+    box-shadow: 0px 0px vw(15) 0px $sub;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: vw(20);
+    margin-bottom: vw(30);
+
+    .banner-inner {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      .inner-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+          color: $font;
+          margin-bottom: vw(5);
+        }
+        h2 {
+          color: $font;
+        }
+        h3 {
+          color: $sub;
+          position: absolute;
+          bottom: 0;
+        }
+      }
+      .inner-right {
+        height: vw(250);
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  form {
+    width: vw(1200);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    h3 {
+      margin-bottom: vw(30);
+      font-weight: bold;
+    }
+    .input-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: vw(30);
+      row-gap: vw(25);
+      margin-bottom: vw(30);
+      .input-wrapper {
+        width: vw(585);
+      }
+    }
+    .options-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: vw(30);
+      row-gap: vw(25);
+      margin-bottom: vw(30);
+      .input-wrapper {
+        width: vw(585);
+      }
+    }
+  }
+}
