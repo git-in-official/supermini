@@ -1,0 +1,1 @@
+reset, normalize, font정의 등 html요소의 표준 스타일 배치

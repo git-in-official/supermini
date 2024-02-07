@@ -1,0 +1,1 @@
+사이트 구조에 해당하는 레이아웃인 gnb(global navigation bar), header,footer,navigation 등을 정의하여 배치

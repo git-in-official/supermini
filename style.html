@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="styleguide-box">
+      <ul class="styleguide-list">
+        <li class="styleguide-menu">
+          <a href="#style1" class="styleguide-link">헤더</a>
+        </li>
+        <li class="styleguide-menu">
+          <a href="#style2" class="styleguide-link">푸터</a>
+        </li>
+        <li class="styleguide-menu">
+          <a href="#style3" class="styleguide-link">인풋박스</a>
+        </li>
+        <li class="styleguide-menu">
+          <a href="#style4" class="styleguide-link">버튼</a>
+        </li>
+        <li class="styleguide-menu">
+          <a href="#style5" class="styleguide-link">문자</a>
+        </li>
+        <li class="styleguide-menu">
+          <a href="#style5" class="styleguide-link">모달창</a>
+        </li>
+        <li class="styleguide-menu">
+          <a href="#style5" class="styleguide-link">포트폴리오박스</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="guidebox">
+      <header id="style1">
+        <a class="logo" href=""><img src="/images/Supermini_Logo.svg" /></a>
+        <div class="menubar">
+          <ul>
+            <li><a href="">SUPERMINI.A 소개</a></li>
+            <li><a href="">포트폴리오</a></li>
+            <li><a href="">프로젝트 안내</a></li>
+          </ul>
+          <button href="">
+            <a>프로젝트 의뢰하기</a>
+          </button>
+        </div>
+      </header>
+      <footer id="style2">
+        <svg viewBox="0 0 120 28">
+          <defs>
+            <mask id="xxx">
+              <circle cx="7" cy="12" r="40" fill="#fff" />
+            </mask>
+
+            <filter id="goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="2"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="
+                   1 0 0 0 0  
+                   0 1 0 0 0  
+                   0 0 1 0 0  
+                   0 0 0 13 -9"
+                result="goo"
+              />
+              <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+            <path
+              id="wave"
+              d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z"
+            />
+          </defs>
+
+          <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2"></use>
+          <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0"></use>
+
+          <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+        </svg>
+
+        <div class="footer-container">
+          <div class="footer-top">
+            <ul>
+              <span class="title">회사주소</span>
+              <li>
+                <span class="germany">[독일본사]</span
+                ><span class="content">Gerhofstraße 38 20354 Hamburg</span>
+              </li>
+              <li>
+                <span class="korea">[한국지사]</span
+                ><span class="content">서울특별시 동대문구 휘경동 60</span>
+              </li>
+            </ul>
+            <ul>
+              <span class="title">TEL.</span>
+              <li>
+                <span class="germany">[독일본사]</span
+                ><span class="content">+49 177 6323293</span>
+              </li>
+              <li>
+                <span class="korea">[한국지사]</span
+                ><span class="content">010-2607-7548</span>
+              </li>
+            </ul>
+            <ul>
+              <span class="title">E-MAIL</span>
+              <li>
+                <span class="germany">[독일본사]</span
+                ><span class="content">office@supermini.archi</span>
+              </li>
+              <li>
+                <span class="korea">[한국지사]</span
+                ><span class="content">dasawafa@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-bottom">
+            <div class="footer-bottom-wrapper">
+              <a href="" class="logo"
+                ><img src="/images/Supermini_Logo.svg" alt=""
+              /></a>
+            </div>
+            <div class="footer-bottom-wrapper"></div>
+            <div class="footer-bottom-wrapper">
+              <p>@ 2023 SUPERMINI.A. All Rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div id="style3">
+        <div class="input-wrapper">
+          <!-- form action="서버url" method="POST" -->
+          <label for="inp" class="inp">
+            <input
+              type="text"
+              id="inp"
+              placeholder="&nbsp;"
+              name="서버전송명"
+            />
+            <span class="label">인풋이름</span>
+            <span class="focus-bg"></span>
+          </label>
+        </div>
+      </div>
+      <div id="style4">
+        <button href="">
+          <a>버튼</a>
+        </button>
+      </div>
+      <div id="style5">
+        <!-- 중요할수록 h1 -->
+        <h1>제목, 중요한 글자</h1>
+        <h2>박스제목</h2>
+        <h3>박스제목 설명</h3>
+        <h4>wrapper 타이틀, 기타 글씨</h4>
+      </div>
+    </div>
+  </body>
+</html>

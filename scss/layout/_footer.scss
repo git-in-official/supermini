@@ -1,0 +1,120 @@
+footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+
+  //실제 사용할 때엔 padding값으로 상단과 거리 조절
+
+  .footer-container {
+    padding: 0;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    .footer-top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: $sub;
+      margin-bottom: vw(10);
+
+      ul {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: vw(5);
+        width: vw(260);
+
+        .title {
+          font-size: vw(16);
+          font-weight: bold;
+        }
+        li {
+          .germany,
+          .korea {
+            font-size: vw(13);
+          }
+          .content {
+            font-size: vw(13);
+            margin-left: vw(10);
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      background-color: $sub;
+      display: flex;
+      justify-content: space-around;
+      .footer-bottom-wrapper {
+        width: vw(260);
+        p {
+          color: $font;
+        }
+      }
+
+      .logo {
+        width: vw(100);
+        height: vw(24);
+        display: block;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  svg {
+    width: 100%;
+
+    .wave {
+      animation: wave 3s linear infinite;
+      fill: $sub;
+    }
+
+    #wave2 {
+      animation-duration: 5s;
+      animation-direction: reverse;
+      opacity: 0.6;
+    }
+
+    #wave3 {
+      animation-duration: 7s;
+      opacity: 0.3;
+    }
+  }
+}
+
+.gooeff {
+  filter: url(#goo);
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(80%);
+    opacity: 0.6;
+  }
+  80% {
+    transform: translateY(80%);
+    opacity: 0.6;
+  }
+  90% {
+    transform: translateY(10%);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0%) scale(1.5);
+    stroke-width: 0.2;
+    opacity: 0;
+  }
+}
+
+@keyframes wave {
+  to {
+    transform: translateX(-100%);
+  }
+}

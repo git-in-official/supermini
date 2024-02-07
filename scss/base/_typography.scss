@@ -1,0 +1,17 @@
+//구글폰트에서 원하는 폰트 임포트형식으로 가져오기
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+//임포트한 포트의 css클래스 중 폰트패밀리 글로벌에 적용하기
+html,
+body {
+  font-family: "Pretendard-Regular";
+}
+
+html {
+  font-size: 62.5%;
+}

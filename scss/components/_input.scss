@@ -1,0 +1,66 @@
+.input-wrapper {
+  width: vw(230);
+  .inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+
+    .label {
+      position: absolute;
+      top: 0px;
+      left: 12px;
+      font-size: 16px;
+      color: rgba($font, 0.5);
+      font-weight: 500;
+      transform-origin: 0 0;
+      transform: translate3d(0, 0, 0);
+      transition: all 0.2s ease;
+      pointer-events: none;
+    }
+
+    input {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      font-family: inherit;
+      padding: 16px 12px 0 12px;
+      height: 56px;
+      font-size: 16px;
+      font-weight: 400;
+      background: rgba($font, 0.02);
+      box-shadow: inset 0 -1px 0 rgba($font, 0.3);
+      color: $font;
+      transition: all 0.15s ease;
+
+      &:hover {
+        background: rgba($font, 0.04);
+        box-shadow: inset 0 -1px 0 rgba($font, 0.5);
+      }
+
+      &:not(:placeholder-shown) + .label {
+        color: rgba($font, 0.5);
+        transform: translate3d(0, -12px, 0) scale(0.75);
+      }
+
+      &:focus {
+        background: rgba($font, 0.05);
+        outline: none;
+        box-shadow: inset 0 -2px 0 $sub;
+
+        + .label {
+          color: $sub;
+          transform: translate3d(0, -12px, 0) scale(0.75);
+
+          + .focus-bg {
+            transform: scaleX(1);
+            transition: all 0.1s ease;
+          }
+        }
+      }
+    }
+  }
+}

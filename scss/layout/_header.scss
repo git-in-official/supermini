@@ -1,0 +1,63 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: vw(1200);
+  height: vw(75);
+  background-color: $background;
+  margin-left: auto;
+  margin-right: auto;
+  //실제 사용할 때에는 position 필요.
+  .logo {
+    width: vw(200);
+    height: vw(48.5);
+    display: block;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .menubar {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    margin-left: vw(50);
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: vw(57);
+
+      li {
+        float: left;
+        a {
+          color: $silver;
+          font-size: vw(18);
+          font-weight: bolder;
+          box-sizing: border-box;
+          transition: color 0.5s ease-out;
+          position: relative;
+          display: inline-block;
+          &::after {
+            content: "";
+            top: vw(30);
+            position: absolute;
+            width: 0; // Start with no width
+            height: 2px; // Thickness of the underline
+            bottom: -5px; // Distance of the underline from the text
+            left: 0;
+            background-color: $font; // Use your actual color variable or hex code for the underline
+            transition: width 0.5s ease-out; // Transition for the underline effect
+          }
+
+          &:hover::after {
+            width: 100%; // Full width on hover
+          }
+          &:hover {
+            color: $font;
+          }
+        }
+      }
+    }
+  }
+}

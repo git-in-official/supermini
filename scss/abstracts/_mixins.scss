@@ -1,0 +1,20 @@
+//사용방법
+//해당 파일에서 @mixin으로 선언하고, 사용할 파일에서 @include하여 임포트
+//변수는 #{}로 보호해주기. 변수는 @mixin 선언문()에서
+//()안의 내용이고, 그 중에서 color, text-decoration같은 역할을 하는
+//코드에 #{}로 보호
+
+//@include position(left, 50%, top, 50%)같은 방법으로 사용
+@mixin position($x, $xvalue, $y: null, $yvalue: null) {
+  position: absolute;
+  #{$x}: $xvalue;
+  #{$y}: $yvalue;
+
+  @if $xvalue == 50% and $yvalue == 50% {
+    transform: translate(-50%, -50%);
+  } @else if $xvalue == 50% {
+    transform: translateX(-50%);
+  } @else if $yvalue == 50% {
+    transform: translateY(-50%);
+  }
+}

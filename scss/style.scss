@@ -1,0 +1,19 @@
+// 사용할 scss파일들 임포트하는 페이지.
+// 임포트 방법은
+// @import '' 후 컨트롤+스페이스하여 파일찾은 후 세미콜론
+
+@import "abstracts/variables"; //변수
+@import "abstracts/mixins"; //믹스인
+@import "base/reset"; //리셋, 노멀라이즈 css
+@import "base/typography"; //폰트정의
+@import "abstracts/function";
+
+@import "layout/header"; //헤더
+@import "layout/footer"; //푸터
+@import "layout/align";
+@import "layout/guide";
+@import "layout/index";
+@import "layout/module";
+
+@import "components/input"; //인풋박스
+@import "components/button"; //버튼

@@ -1,0 +1,14 @@
+@use "sass:math";
+//px to rem
+//실측값/기준폰트크기 = rem
+//실측값 = 개발자도구에서 나오는 px값
+@function rem($px, $base: 10) {
+  $sum: math.div($px, $base) * 1rem;
+  @return $sum;
+}
+
+//반응형을 위한 뷰포트
+@function vw($px, $base: 1440) {
+  $sum: math.div($px, $base) * 100vw;
+  @return $sum;
+}

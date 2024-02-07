@@ -1,0 +1,17 @@
+//정렬
+
+//&의 사용법은 tailwind같음.
+//사용할 css파일에서 class에 class="align left"와 같이
+//한칸 띄고 사용하면 됨.
+.align {
+  display: flex;
+  &.left {
+    justify-content: flex-start;
+  }
+  &.right {
+    justify-content: flex-end;
+  }
+  &.center {
+    justify-content: space-between;
+  }
+}
