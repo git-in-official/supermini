@@ -581,9 +581,118 @@ button a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2.0833333333vw;
-  row-gap: 1.7361111111vw;
+  row-gap: 2.0833333333vw;
   margin-bottom: 2.0833333333vw;
+}
+.contactUs form .options-list .full {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+.contactUs form .options-list .full .cont-label {
+  font-size: 1.1111111111vw;
+  margin-bottom: 0.3472222222vw;
+}
+.contactUs form .options-list .full .cont-textarea {
+  width: 83.3333333333vw;
+  height: 13.8888888889vw;
+  resize: none;
+  background: rgba(148, 176, 179, 0.15);
+  font-family: "Pretendard-Regular";
+  font-size: 1.0416666667vw;
+  padding: 0.6944444444vw;
+}
+.contactUs form .options-list .full .cont-textarea:focus {
+  outline: 2px solid #94b0b3;
+}
+.contactUs form .options-list .radio-button-input-scale {
+  display: flex;
+  flex-direction: column;
+}
+.contactUs form .options-list .radio-button-input-scale .label {
+  font-size: 1.1111111111vw;
+  margin-bottom: 0.3472222222vw;
+}
+.contactUs form .options-list .radio-button-input-scale .scale-input,
+.contactUs form .options-list .radio-button-input-scale .subscribe-input {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.contactUs form .options-list .radio-button-input-scale .label-subscribe {
+  background: linear-gradient(100deg, #008a94 0%, #008a94 30%, #94b0b3 70%, #94b0b3 100%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 2.0833333333vw;
+  border-radius: 3.4722222222vw;
+  line-height: 2.0833333333vw;
+}
+.contactUs form .options-list .radio-button-input-scale .label-scale {
+  background: linear-gradient(100deg, #008a94 0%, #008a94 30%, #94b0b3 70%, #94b0b3 100%);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 2.0833333333vw;
+  border-radius: 3.4722222222vw;
+  line-height: 2.0833333333vw;
+}
+.contactUs form .options-list .radio-button-input-scale .scale-label,
+.contactUs form .options-list .radio-button-input-scale .subscribe-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 0.9722222222vw;
+}
+.contactUs form .options-list .radio-button-input-scale .scale-label:nth-child(2),
+.contactUs form .options-list .radio-button-input-scale .subscribe-label:nth-child(2) {
+  border-left: none;
+}
+.contactUs form .options-list .radio-button-input-scale .scale-input:checked + .scale-label {
+  color: #ffffff;
+}
+.contactUs form .options-list .radio-button-input-scale .subscribe-input:checked + .subscribe-label {
+  color: #ffffff;
 }
 .contactUs form .options-list .input-wrapper {
   width: 40.625vw;
+}
+.contactUs form .select-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 2.0833333333vw;
+  margin-bottom: 2.0833333333vw;
+  /* Style for the label */
+  /* Change background color when the input is checked */
+}
+.contactUs form .select-wrapper .category-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.contactUs form .select-wrapper .category-label {
+  cursor: pointer;
+  border-radius: 0.6944444444vw;
+  height: 4.1666666667vw;
+  border: 1px solid #aca9bb;
+  padding: 1.0416666667vw;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease-out;
+}
+.contactUs form .select-wrapper .category-label:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+.contactUs form .select-wrapper .category-input:checked + .category-label {
+  background-color: #008a94;
+  color: #ffffff;
+}
+.contactUs form .select-wrapper span {
+  font-size: 1.1111111111vw;
+  display: block;
+}
+.contactUs form #list3 {
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */

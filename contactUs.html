@@ -35,11 +35,11 @@
     </div>
     <!-- onsubmit은 나중에 자바스크립트로 필수입력칸과 관련된 코드실행예정 -->
     <form
-      action="서버url"
+  
       method="post"
       autocomplete="off"
       enctype="multipart/form-data"
-      onsubmit="return request()"
+      onsubmit="return handleSubmit()"
     >
       <h3>고객 기본 정보</h3>
       <ul class="input-container">
@@ -64,7 +64,7 @@
         <li>
           <div class="input-wrapper">
             <label for="inp" class="inp">
-              <input type="text" id="inp" placeholder="&nbsp;" name="tel" />
+              <input type="tel" id="inp" placeholder="&nbsp;" name="tel" />
               <span class="label">연락처 *</span>
               <span class="focus-bg"></span>
             </label>
@@ -73,7 +73,7 @@
         <li>
           <div class="input-wrapper">
             <label for="inp" class="inp">
-              <input type="text" id="inp" placeholder="&nbsp;" name="email" />
+              <input type="email" id="inp" placeholder="&nbsp;" name="email" />
               <span class="label">이메일 *</span>
               <span class="focus-bg"></span>
             </label>
@@ -81,39 +81,172 @@
         </li>
       </ul>
       <h3>의뢰사항</h3>
-      <label for="selectOption" class="select-wrapper">
-        <select name="requestCategory" id="selectOption" class="option-bar">
-          <option value="option1">홈페이지 / 모바일웹 제작</option>
-          <option value="option2">웹/앱 디자인</option>
-          <option value="option3">검색엔진 최적화 / 유지보수</option>
-          <option value="option4">IR DECK / 제안서 제작</option>
-          <option value="option5">사업전략 컨설팅</option>
-        </select>
-      </label>
+      <div class="select-wrapper">
+        <input
+          class="category-input"
+          type="radio"
+          name="requestCategory"
+          id="option1"
+          value="option1"
+          checked
+        />
+        <label class="category-label" for="option1"
+          ><span>홈페이지 / 모바일웹 제작</span></label
+        >
+        <input
+          class="category-input"
+          type="radio"
+          name="requestCategory"
+          id="option2"
+          value="option2"
+        />
+        <label class="category-label" for="option2"
+          ><span>웹 / 앱 디자인</span></label
+        >
+        <input
+          class="category-input"
+          type="radio"
+          name="requestCategory"
+          id="option3"
+          value="option3"
+        />
+        <label class="category-label" for="option3"
+          ><span>검색엔진 최적화 / 유지보수</span></label
+        >
+        <!-- <input
+          class="category-input"
+          type="radio"
+          name="requestCategory"
+          id="option4"
+          value="option4"
+        />
+        <label class="category-label" for="option4"
+          ><span>IR DECK / 제안서 작성</span></label
+        >
+        <input
+          class="category-input"
+          type="radio"
+          name="requestCategory"
+          id="option5"
+          value="option5"
+        />
+        <label class="category-label" for="option5"
+          ><span>사업전략 컨설팅</span></label
+        > -->
+      </div>
       <ul id="list1" class="options-list" style="display: none">
         <li>
-          <div class="input-wrapper">
-            <label for="inp" class="inp">
-              <input type="text" id="inp" placeholder="&nbsp;" name="client" />
-              <span class="label">예상 분량 *</span>
-              <span class="focus-bg"></span>
-            </label>
+          <div class="radio-button-input-scale">
+            <span class="label">예상 분량 *</span>
+
+            <div class="label-scale">
+              <input
+                class="scale-input"
+                type="radio"
+                id="amount1"
+                name="amount"
+                value="amount1"
+                checked
+              />
+              <label class="scale-label" for="amount1"
+                ><span>~10페이지</span></label
+              >
+              <input
+                class="scale-input"
+                type="radio"
+                id="amount2"
+                name="amount"
+                value="amount2"
+              />
+              <label class="scale-label" for="amount2"
+                ><span>10~15페이지</span></label
+              >
+              <input
+                class="scale-input"
+                type="radio"
+                id="amount3"
+                name="amount"
+                value="amount3"
+              />
+              <label class="scale-label" for="amount3"
+                ><span>15~20페이지</span></label
+              >
+              <input
+                class="scale-input"
+                type="radio"
+                id="amount4"
+                name="amount"
+                value="amount4"
+              />
+              <label class="scale-label" for="amount4"
+                ><span>20~25페이지</span></label
+              >
+              <input
+                class="scale-input"
+                type="radio"
+                id="amount5"
+                name="amount"
+                value="amount5"
+              />
+              <label class="scale-label" for="amount5"
+                ><span>25페이지~</span></label
+              >
+            </div>
           </div>
         </li>
         <li>
-          <div class="input-wrapper">
-            <label for="inp" class="inp">
-              <input type="text" id="inp" placeholder="&nbsp;" name="company" />
-              <span class="label">구독모델 선택 *</span>
-              <span class="focus-bg"></span>
-            </label>
-          </div>
+          <div class="radio-button-input-scale">
+            <span class="label">구독모델 선택 *</span>
+
+            <div class="label-subscribe">
+              
+              <input
+                class="subscribe-input"
+                type="radio"
+                id="subscribe2"
+                name="subscribe"
+                value="subscribe2"
+                checked
+              />
+              <label class="subscribe-label" for="subscribe2"
+                ><span>₩50,000</span></label
+              >
+              <input
+                class="subscribe-input"
+                type="radio"
+                id="subscribe3"
+                name="subscribe"
+                value="subscribe3"
+              />
+              <label class="subscribe-label" for="subscribe3"
+                ><span>₩70,000</span></label
+              >
+              <input
+                class="subscribe-input"
+                type="radio"
+                id="subscribe4"
+                name="subscribe"
+                value="subscribe4"
+              />
+              <label class="subscribe-label" for="subscribe4"
+                ><span>₩100,000</span></label
+              >
+              <input
+                class="subscribe-input"
+                type="radio"
+                id="subscribe5"
+                name="subscribe"
+                value="subscribe5"
+              />
+              <label class="subscribe-label" for="subscribe5"
+                ><span>커스터마이징</span></label
+              >
         </li>
         <li>
           <div class="input-wrapper">
             <label for="inp" class="inp">
               <input type="text" id="inp" placeholder="&nbsp;" name="tel" />
-              <span class="label">참고 사이트 *</span>
+              <span class="label">참고 사이트</span>
               <span class="focus-bg"></span>
             </label>
           </div>
@@ -122,36 +255,129 @@
           <div class="input-wrapper">
             <label for="inp" class="inp">
               <input type="text" id="inp" placeholder="&nbsp;" name="email" />
-              <span class="label">보유 도메인 *</span>
+              <span class="label">보유 도메인</span>
               <span class="focus-bg"></span>
             </label>
           </div>
+        </li>
+        <li class="full">
+          <label  for="cont" class="cont-label">상세 의뢰사항</label>
+          <textarea name="cont" id="cont" cols="30" rows="10" class="cont-textarea" placeholder="색감, 느낌, 필요한 부분 등 입력해주시면 상담에 도움이 됩니다."></textarea>
         </li>
       </ul>
       <ul id="list2" class="options-list" style="display: none">
         <li>
-          <div class="input-wrapper">
-            <label for="inp" class="inp">
-              <input type="text" id="inp" placeholder="&nbsp;" name="client" />
-              <span class="label">예상 분량 *</span>
-              <span class="focus-bg"></span>
-            </label>
+          <div class="radio-button-input-scale">
+            <span class="label">예상 분량 *</span>
+
+            <div class="label-scale">
+              <input
+                class="scale-input"
+                type="radio"
+                id="amount1"
+                name="amount"
+                value="amount1"
+                checked
+              />
+              <label class="scale-label" for="amount1"
+                ><span>~10페이지</span></label
+              >
+              <input
+                class="scale-input"
+                type="radio"
+                id="amount2"
+                name="amount"
+                value="amount2"
+              />
+              <label class="scale-label" for="amount2"
+                ><span>10~15페이지</span></label
+              >
+              <input
+                class="scale-input"
+                type="radio"
+                id="amount3"
+                name="amount"
+                value="amount3"
+              />
+              <label class="scale-label" for="amount3"
+                ><span>15~20페이지</span></label
+              >
+              <input
+                class="scale-input"
+                type="radio"
+                id="amount4"
+                name="amount"
+                value="amount4"
+              />
+              <label class="scale-label" for="amount4"
+                ><span>20~25페이지</span></label
+              >
+              <input
+                class="scale-input"
+                type="radio"
+                id="amount5"
+                name="amount"
+                value="amount5"
+              />
+              <label class="scale-label" for="amount5"
+                ><span>25페이지~</span></label
+              >
+            </div>
           </div>
         </li>
         <li>
-          <div class="input-wrapper">
-            <label for="inp" class="inp">
-              <input type="text" id="inp" placeholder="&nbsp;" name="company" />
-              <span class="label">사업분야 *</span>
-              <span class="focus-bg"></span>
-            </label>
-          </div>
+          <div class="radio-button-input-scale">
+            <span class="label">제작예산 선택 *</span>
+
+            <div class="label-subscribe">
+              
+              <input
+                class="subscribe-input"
+                type="radio"
+                id="subscribe2"
+                name="subscribe"
+                value="subscribe2"
+                checked
+              />
+              <label class="subscribe-label" for="subscribe2"
+                ><span>~ ₩500,000</span></label
+              >
+              <input
+                class="subscribe-input"
+                type="radio"
+                id="subscribe3"
+                name="subscribe"
+                value="subscribe3"
+              />
+              <label class="subscribe-label" for="subscribe3"
+                ><span>₩1,000,000</span></label
+              >
+              <input
+                class="subscribe-input"
+                type="radio"
+                id="subscribe4"
+                name="subscribe"
+                value="subscribe4"
+              />
+              <label class="subscribe-label" for="subscribe4"
+                ><span>₩1,500,000</span></label
+              >
+              <input
+                class="subscribe-input"
+                type="radio"
+                id="subscribe5"
+                name="subscribe"
+                value="subscribe5"
+              />
+              <label class="subscribe-label" for="subscribe5"
+                ><span>₩2,000,000 ~</span></label
+              >
         </li>
         <li>
           <div class="input-wrapper">
             <label for="inp" class="inp">
               <input type="text" id="inp" placeholder="&nbsp;" name="tel" />
-              <span class="label">참고 사이트 *</span>
+              <span class="label">참고 사이트</span>
               <span class="focus-bg"></span>
             </label>
           </div>
@@ -160,29 +386,86 @@
           <div class="input-wrapper">
             <label for="inp" class="inp">
               <input type="text" id="inp" placeholder="&nbsp;" name="email" />
-              <span class="label">보유 도메인 *</span>
+              <span class="label">보유 도메인</span>
               <span class="focus-bg"></span>
             </label>
           </div>
+        </li>
+        <li class="full">
+          <label  for="cont" class="cont-label">상세 의뢰사항</label>
+          <textarea name="cont" id="cont" cols="30" rows="10" class="cont-textarea" placeholder="색감, 느낌, 필요한 부분 등 입력해주시면 상담에 도움이 됩니다."></textarea>
         </li>
       </ul>
       <ul id="list3" class="options-list" style="display: none">
         <li>
           <div class="input-wrapper">
             <label for="inp" class="inp">
-              <input type="text" id="inp" placeholder="&nbsp;" name="client" />
-              <span class="label">보유 도메인 *</span>
+              <input type="text" id="inp" placeholder="&nbsp;" name="email" />
+              <span class="label">보유 도메인</span>
               <span class="focus-bg"></span>
             </label>
           </div>
         </li>
+           <li>
+          <div class="radio-button-input-scale">
+            <span class="label">구독모델 선택 *</span>
+
+            <div class="label-subscribe">
+              
+              <input
+                class="subscribe-input"
+                type="radio"
+                id="subscribe2"
+                name="subscribe"
+                value="subscribe2"
+                checked
+              />
+              <label class="subscribe-label" for="subscribe2"
+                ><span>₩50,000</span></label
+              >
+              <input
+                class="subscribe-input"
+                type="radio"
+                id="subscribe3"
+                name="subscribe"
+                value="subscribe3"
+              />
+              <label class="subscribe-label" for="subscribe3"
+                ><span>₩70,000</span></label
+              >
+              <input
+                class="subscribe-input"
+                type="radio"
+                id="subscribe4"
+                name="subscribe"
+                value="subscribe4"
+              />
+              <label class="subscribe-label" for="subscribe4"
+                ><span>₩100,000</span></label
+              >
+              <input
+                class="subscribe-input"
+                type="radio"
+                id="subscribe5"
+                name="subscribe"
+                value="subscribe5"
+              />
+              <label class="subscribe-label" for="subscribe5"
+                ><span>커스터마이징</span></label
+              >
+        </li>
+        <li class="full">
+          <label  for="cont" class="cont-label">상세 의뢰사항</label>
+          <textarea name="cont" id="cont" cols="30" rows="10" class="cont-textarea" placeholder="색감, 느낌, 필요한 부분 등 입력해주시면 상담에 도움이 됩니다."></textarea>
+        </li>
       </ul>
-      <ul id="list4" class="options-list" style="display: none">
+      <!-- <ul id="list4" class="options-list" style="display: none">
         4
       </ul>
       <ul id="list5" class="options-list" style="display: none">
         5
-      </ul>
+      </ul> -->
+      <button type="submit">제출하기</button>
     </form>
     <footer id="style2">
       <svg viewBox="0 0 120 28">
@@ -267,5 +550,57 @@
       </div>
     </footer>
     <script src="/js/ulOnOff.js"></script>
+    <script>function handleSubmit(event) {
+      event.preventDefault(); // 폼의 기본 제출 동작을 방지
+    
+      // 필수 입력 필드 ID와 이름
+      const requiredFields = [
+        { id: 'client', name: '의뢰자' },
+        { id: 'company', name: '기업명' },
+        { id: 'tel', name: '연락처' },
+        { id: 'email', name: '이메일' }
+      ];
+      
+      let isFieldMissing = false;
+    
+      // 필수 입력 필드 검사
+      requiredFields.forEach(field => {
+        const input = document.getElementById(field.id);
+        if (!input.value.trim()) {
+          console.error(`${field.name}을(를) 입력해주세요.`); // 콘솔에 오류 메시지 출력
+          alert(`${field.name}을(를) 입력해주세요.`); // 사용자에게 입력 요구
+          input.focus();
+          isFieldMissing = true;
+          return;
+        }
+      });
+    
+      if (isFieldMissing) {
+        return; // 필수 필드가 누락된 경우 폼 제출을 중단
+      }
+    
+      // 폼 데이터 로깅을 위한 FormData 객체 생성
+      const formData = new FormData(event.target);
+      const formDataObj = {};
+      formData.forEach((value, key) => { formDataObj[key] = value; });
+    
+      // 콘솔에 폼 데이터 출력
+      console.log("폼 데이터:", formDataObj);
+    }
+  
+      /*
+      // 비동기 데이터 전송 예시 (주석 처리)
+      fetch('서버url', {
+        method: 'POST',
+        body: formData,
+      })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error('Error:', error));
+      */
+  
+      // 폼 기본 제출 방지
+      return false;
+    </script>
   </body>
 </html>
