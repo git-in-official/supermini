@@ -1,0 +1,104 @@
+.index {
+  .herobanner-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - vw(200));
+    background-color: $sub;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+    animation: changeSize 1.5s forwards;
+    animation-delay: 2s;
+    overflow: hidden;
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .banner-inner {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      .banner-text-wrapper {
+        h1,
+        h2 {
+          color: $background;
+          margin-bottom: vw(10);
+        }
+        :nth-child(1) {
+          opacity: 0;
+          animation: fadeInOpacity 1.5s forwards;
+          animation-delay: 3.5s;
+        }
+        :nth-child(2) {
+          opacity: 0;
+          animation: fadeInOpacity 1.5s forwards;
+          animation-delay: 3.8s;
+        }
+        :nth-child(3) {
+          opacity: 0;
+          animation: fadeInOpacity 1.5s forwards;
+          animation-delay: 3.8s;
+        }
+      }
+    }
+    .pentagon {
+      opacity: 0;
+      animation: fadeInOpacity 1.5s forwards;
+      animation-delay: 3.8s;
+      position: absolute;
+      bottom: 10%;
+      right: 5%;
+      width: vw(100);
+      height: vw(100);
+      background-color: $background;
+      clip-path: polygon(51% 0, 100% 0, 100% 100%, 0 100%, 0 28%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      border-radius: vw(10);
+      img {
+        width: 90%;
+        margin-top: vw(20);
+      }
+    }
+  }
+
+  @keyframes changeSize {
+    from {
+      width: 100%;
+      border-radius: 0;
+    }
+    to {
+      width: vw(1200);
+      border-radius: vw(20);
+    }
+  }
+
+  @keyframes fadeInOpacity {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX();
+    }
+  }
+  .portfolio-container {
+    width: vw(1200);
+    margin-top: vw(40);
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    animation: fadeInOpacity 1.5s forwards;
+    animation-delay: 3.8s;
+  }
+}

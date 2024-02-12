@@ -519,6 +519,103 @@ button a {
   margin-top: 0.3472222222vw;
 }
 
+.index .herobanner-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 13.8888888889vw);
+  background-color: #94b0b3;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0;
+  animation: changeSize 1.5s forwards;
+  animation-delay: 2s;
+  overflow: hidden;
+}
+.index .herobanner-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.index .herobanner-container .banner-inner {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+.index .herobanner-container .banner-inner .banner-text-wrapper h1,
+.index .herobanner-container .banner-inner .banner-text-wrapper h2 {
+  color: #ffffff;
+  margin-bottom: 0.6944444444vw;
+}
+.index .herobanner-container .banner-inner .banner-text-wrapper :nth-child(1) {
+  opacity: 0;
+  animation: fadeInOpacity 1.5s forwards;
+  animation-delay: 3.5s;
+}
+.index .herobanner-container .banner-inner .banner-text-wrapper :nth-child(2) {
+  opacity: 0;
+  animation: fadeInOpacity 1.5s forwards;
+  animation-delay: 3.8s;
+}
+.index .herobanner-container .banner-inner .banner-text-wrapper :nth-child(3) {
+  opacity: 0;
+  animation: fadeInOpacity 1.5s forwards;
+  animation-delay: 3.8s;
+}
+.index .herobanner-container .pentagon {
+  opacity: 0;
+  animation: fadeInOpacity 1.5s forwards;
+  animation-delay: 3.8s;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 6.9444444444vw;
+  height: 6.9444444444vw;
+  background-color: #ffffff;
+  clip-path: polygon(51% 0, 100% 0, 100% 100%, 0 100%, 0 28%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 0.6944444444vw;
+}
+.index .herobanner-container .pentagon img {
+  width: 90%;
+  margin-top: 1.3888888889vw;
+}
+@keyframes changeSize {
+  from {
+    width: 100%;
+    border-radius: 0;
+  }
+  to {
+    width: 83.3333333333vw;
+    border-radius: 1.3888888889vw;
+  }
+}
+@keyframes fadeInOpacity {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX();
+  }
+}
+.index .portfolio-container {
+  width: 83.3333333333vw;
+  margin-top: 2.7777777778vw;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  animation: fadeInOpacity 1.5s forwards;
+  animation-delay: 3.8s;
+}
+
 .contactUs .banner-container {
   box-shadow: 0px 0px 1.0416666667vw 0px #94b0b3;
   display: flex;
