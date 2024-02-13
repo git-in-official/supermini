@@ -17,3 +17,90 @@ h4 {
   font-size: vw(16);
   font-weight: 500;
 }
+
+.portfolio-wrapper {
+  width: vw(1200);
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .left-portfolio,
+  .right-portfolio {
+    height: vw(365);
+
+    a {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      &:hover .hover-wrapper {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      &:hover .text-wrapper {
+        display: none;
+        opacity: 0;
+        transform: translateX(-1%);
+      }
+
+      .hover-wrapper {
+        opacity: 0;
+        transform: translateX(1%);
+        transition: all 0.3s ease-out;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-color: $backgroundad;
+        justify-content: center;
+        align-items: center;
+        .hover-inner {
+          width: 60%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h2 {
+            color: $background;
+            border-bottom: 2px solid $background;
+          }
+          h3 {
+            color: $background;
+            text-align: right;
+            margin-bottom: vw(10);
+          }
+          h4 {
+            font-size: vw(15);
+            color: $background;
+          }
+        }
+      }
+
+      div {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        .text-wrapper {
+          opacity: 1;
+          transform: translateX(0);
+          transition: all 0.3s ease-out;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: fit-content;
+          height: fit-content;
+          padding: vw(10);
+          border-top-right-radius: vw(10);
+          background-color: $background6b;
+          h3 {
+            color: $background;
+            margin-bottom: vw(5);
+          }
+          h4 {
+            color: $background;
+          }
+        }
+      }
+    }
+  }
+}

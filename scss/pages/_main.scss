@@ -6,6 +6,7 @@
     background-color: $sub;
     margin-left: auto;
     margin-right: auto;
+    margin-top: vw(75);
     border-radius: 0;
     animation: changeSize 1.5s forwards;
     animation-delay: 2s;
@@ -100,5 +101,23 @@
     opacity: 0;
     animation: fadeInOpacity 1.5s forwards;
     animation-delay: 3.8s;
+    ul {
+      h2 {
+        margin-bottom: vw(20);
+      }
+
+      button {
+        margin: vw(20) auto vw(20) auto;
+      }
+    }
+  }
+  .last-container {
+    position: relative;
+    z-index: 200;
+    width: 100%;
+    height: 1200px;
+    background-color: #000000;
+    border-radius: 1.25rem 1.25rem 0 0;
+    color: #ffffff;
   }
 }
