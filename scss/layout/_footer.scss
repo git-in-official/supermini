@@ -10,8 +10,10 @@ footer {
     width: 100%;
     color: #fff;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: absolute;
+    justify-content: center;
+    margin-bottom: vw(25);
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
@@ -19,14 +21,14 @@ footer {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      align-items: flex-end;
       background-color: $sub;
-      margin-bottom: vw(10);
 
       ul {
         text-align: left;
         display: flex;
         flex-direction: column;
-        gap: vw(5);
+        gap: vw(10);
         width: vw(260);
 
         .title {
@@ -48,21 +50,23 @@ footer {
     .footer-bottom {
       background-color: $sub;
       display: flex;
-      justify-content: space-around;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       .footer-bottom-wrapper {
         width: vw(260);
+        display: flex;
+        justify-content: flex-end;
         p {
-          color: $font;
+          color: $background;
         }
       }
 
       .logo {
-        width: vw(100);
-        height: vw(24);
+        width: vw(50);
         display: block;
         img {
           width: 100%;
-          height: 100%;
         }
       }
     }

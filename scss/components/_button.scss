@@ -15,4 +15,8 @@ button {
     font-weight: 500;
     font-size: vw(16);
   }
+  &:hover a {
+    color: $font;
+    transition: color 1s ease-out;
+  }
 }
