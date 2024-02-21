@@ -255,7 +255,7 @@ header .menubar ul li a:hover {
 }
 
 footer {
-  width: 100vw;
+  width: 100%;
   position: relative;
   bottom: 0;
 }
@@ -1098,4 +1098,166 @@ button:hover a {
 }
 .contactUs form #list3 {
   flex-direction: column;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.aboutus .herobanner {
+  height: calc(100vh - 5.2083333333vw);
+  margin-top: 5.2083333333vw;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent 70%, #819fae 100%), url(/images/millennial-group-young-businesspeople-asia-businessman-businesswoman-celebrate-giving-five-after-dealing-feeling-happy-signing-contract-agreement-meeting-room-small-modern-office.jpg);
+  background-size: cover;
+  background-position: center;
+}
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
+.aboutus .herobanner .herobanner-inner {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutus .herobanner .herobanner-inner .slogan-wrapper {
+  display: flex;
+  margin-bottom: 5.5555555556vw;
+}
+.aboutus .herobanner .herobanner-inner .slogan-wrapper span {
+  color: #5f50f0;
+}
+.aboutus .herobanner .herobanner-inner .slogan-wrapper p {
+  font-size: 5vw;
+  font-weight: 900;
+}
+.aboutus .herobanner .herobanner-inner .go-down {
+  margin-bottom: 3.4722222222vw;
+}
+.aboutus .herobanner .herobanner-inner .go-down a {
+  color: #5f50f0;
+  width: 100%;
+  height: 100%;
+}
+.aboutus .herobanner .herobanner-inner .go-down a .fas {
+  font-size: 40px;
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+.aboutus .team-mission {
+  background-image: linear-gradient(to bottom, #819fae 80%, transparent 100%);
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutus .team-mission .mission-container {
+  width: 100%;
+  height: 22.2222222222vw;
+  margin-bottom: 13.8888888889vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutus .team-mission .mission-container .mission-wrapper p {
+  font-size: 1.7361111111vw;
+  text-align: center;
+  margin-bottom: 1.7361111111vw;
+  color: #ffffff;
+  font-weight: 500;
+}
+.aboutus .team-mission .mission-container .mission-wrapper h2 {
+  text-align: center;
+  line-height: 3.125vw;
+  color: #ffffff;
+}
+.aboutus .our-business {
+  width: 83.3333333333vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.aboutus .our-business .title {
+  margin-top: 2.0833333333vw;
+  margin-bottom: 1.3888888889vw;
+}
+.aboutus .our-business .business-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.8611111111vw;
+}
+.aboutus .our-business .business-container .team-logo {
+  width: 27.7083333333vw;
+  height: 19.5138888889vw;
+}
+.aboutus .our-business .business-container h2 {
+  border-bottom: 2px solid #212121;
+  padding-bottom: 2.0833333333vw;
+  margin-bottom: 2.0833333333vw;
+}
+.aboutus .our-business .business-container .work-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2.0833333333vw;
+}
+.aboutus .our-business .business-container .work-container .work-wrapper {
+  padding: 2.0833333333vw 1.3888888889vw;
+  width: 22.2222222222vw;
+  height: 15.9722222222vw;
+  border-radius: 1.1111111111vw;
+  position: relative;
+}
+.aboutus .our-business .business-container .work-container .work-wrapper h3 {
+  font-weight: bold;
+  margin-bottom: 0.6944444444vw;
+}
+.aboutus .our-business .business-container .work-container .work-wrapper h4 {
+  line-height: 1.3888888889vw;
+}
+.aboutus .our-business .business-container .work-container .work-wrapper .workmark {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+.aboutus .our-style {
+  margin-top: 6.9444444444vw;
+  width: 83.3333333333vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.aboutus .our-style .title {
+  margin-top: 2.0833333333vw;
+  margin-bottom: 1.3888888889vw;
+}
+.aboutus .our-style ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.7361111111vw;
+  row-gap: 1.0416666667vw;
+}
+.aboutus .our-style ul li {
+  background-color: rgba(129, 159, 174, 0.2666666667);
+  border-radius: 1.1111111111vw;
+  padding: 2.0833333333vw 2.7777777778vw;
+  display: flex;
+  align-items: center;
+  gap: 2.0833333333vw;
+}
+.aboutus .our-style ul li img {
+  width: 2.7777777778vw;
+}
+.aboutus .our-style ul li p {
+  font-size: 1.25vw;
 }/*# sourceMappingURL=style.css.map */

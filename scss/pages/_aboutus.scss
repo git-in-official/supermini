@@ -1,0 +1,169 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.aboutus {
+  .herobanner {
+    height: calc(100vh - vw(75));
+    margin-top: vw(75);
+    position: relative;
+    background-image: linear-gradient(to bottom, transparent 70%, $sub 100%),
+      url(/images/millennial-group-young-businesspeople-asia-businessman-businesswoman-celebrate-giving-five-after-dealing-feeling-happy-signing-contract-agreement-meeting-room-small-modern-office.jpg);
+    background-size: cover;
+    background-position: center;
+    @keyframes moveUpDown {
+      0%,
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+    }
+    .herobanner-inner {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .slogan-wrapper {
+        display: flex;
+        margin-bottom: vw(80);
+        span {
+          color: $highlight;
+        }
+        p {
+          font-size: vw(72);
+          font-weight: 900;
+        }
+      }
+      .go-down {
+        margin-bottom: vw(50);
+        a {
+          color: $highlight;
+          width: 100%;
+          height: 100%;
+          .fas {
+            font-size: 40px;
+            animation: moveUpDown 2s ease-in-out infinite;
+          }
+        }
+      }
+    }
+  }
+  .team-mission {
+    background-image: linear-gradient(to bottom, $sub 80%, transparent 100%);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .mission-container {
+      width: 100%;
+      height: vw(320);
+      margin-bottom: vw(200);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .mission-wrapper {
+        p {
+          font-size: vw(25);
+          text-align: center;
+          margin-bottom: vw(25);
+          color: $background;
+          font-weight: 500;
+        }
+        h2 {
+          text-align: center;
+          line-height: vw(45);
+          color: $background;
+        }
+      }
+    }
+  }
+  .our-business {
+    width: vw(1200);
+    margin-left: auto;
+    margin-right: auto;
+    .title {
+      margin-top: vw(30);
+      margin-bottom: vw(20);
+    }
+    .business-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: vw(70);
+      .team-logo {
+        width: vw(399);
+        height: vw(281);
+      }
+      h2 {
+        border-bottom: 2px solid $font;
+        padding-bottom: vw(30);
+        margin-bottom: vw(30);
+      }
+      .work-container {
+        display: flex;
+        flex-direction: row;
+        gap: vw(30);
+
+        .work-wrapper {
+          padding: vw(30) vw(20);
+          width: vw(320);
+          height: vw(230);
+          border-radius: vw(16);
+          position: relative;
+          h3 {
+            font-weight: bold;
+            margin-bottom: vw(10);
+          }
+          h4 {
+            line-height: vw(20);
+          }
+          .workmark {
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+          }
+        }
+      }
+    }
+  }
+  .our-style {
+    margin-top: vw(100);
+    width: vw(1200);
+    margin-left: auto;
+    margin-right: auto;
+    .title {
+      margin-top: vw(30);
+      margin-bottom: vw(20);
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: vw(25);
+      row-gap: vw(15);
+      li {
+        background-color: #819fae44;
+        border-radius: vw(16);
+        padding: vw(30) vw(40);
+        display: flex;
+        align-items: center;
+        gap: vw(30);
+        img {
+          width: vw(40);
+        }
+        p {
+          font-size: vw(18);
+        }
+      }
+    }
+  }
+}
