@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.fullpage.js"></script>
+    <link rel="stylesheet" href="css/jquery.fullpage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+  </head>
+  <body class="portfolio">
+    <header id="style1">
+      <div class="header-inner">
+        <a class="logo" href="/"><img src="/images/logo_original.png" /></a>
+        <div class="menubar">
+          <ul>
+            <li><a href="">GIT_IN 소개</a></li>
+            <li><a href="">포트폴리오</a></li>
+            <li><a href="">프로젝트 안내</a></li>
+          </ul>
+          <button>
+            <a href="/contactUs.html">프로젝트 의뢰하기</a>
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="title-container">
+      <h1>GIT_IN's Works</h1>
+    </section>
+    <section class="menu-container">
+      <a href="" data-target="all"><h3>ALL</h3></a>
+
+      <a href="" data-target="web-create"><h3>WEB Create</h3> </a>
+
+      <a href="" data-target="web-design"><h3>WEB Design</h3> </a>
+
+      <a href="" data-target="ir-deck"><h3>IR-DECK</h3> </a>
+
+      <a href="" data-target="strategy-consulting"
+        ><h3>Strategy Consult</h3>
+      </a>
+    </section>
+    <section class="portfolio-container">
+      <!-- 규칙 -->
+      <!-- 1. webCreate는 view more을 클릭하면 모달창이 아닌 웹페이지로 이동 -->
+      <!-- 2. 그 외에는 portfolioModa.js를 통해서 넘버링하여 모달 내 이미지 업데이트 -->
+      <!-- 3. 포트폴리오 추가 시, 최상단에 입력 -->
+      <div
+        class="portfolio-item all web-design"
+        style="background-image: url(/images/webdesignreference_main.webp)"
+      >
+        <a href="" class="view-more" data-portfolio-id="webDesign1"
+          ><h3>View More</h3></a
+        >
+      </div>
+      <div
+        class="portfolio-item all web-create"
+        style="background-image: url(/images/webdesignreference_main.webp)"
+      >
+        <a href="/" class="view-more"><h3>View More</h3></a>
+      </div>
+      <div
+        class="portfolio-item all ir-deck"
+        style="background-image: url(/images/webdesignreference_main.webp)"
+      >
+        <a href="" class="view-more" data-portfolio-id="irDeck1"
+          ><h3>View More</h3></a
+        >
+      </div>
+
+      <div
+        class="portfolio-item all strategy-consulting"
+        style="background-image: url(/images/webdesignreference_main.webp)"
+      >
+        <a href="" class="view-more" data-portfolio-id="strategyConsulting1"
+          ><h3>View More</h3></a
+        >
+      </div>
+      <nav class="menu">
+        <input
+          type="checkbox"
+          href="#"
+          class="menu-open"
+          name="menu-open"
+          id="menu-open"
+        />
+        <label class="menu-open-button" for="menu-open">
+          <span class="lines line-1"></span>
+          <span class="lines line-2"></span>
+          <span class="lines line-3"></span>
+        </label>
+
+        <a href="#" class="menu-item red"> <p>팀소개</p> </a>
+
+        <a href="#" class="menu-item orange"> <p>제작안내</p> </a>
+        <a href="#" class="menu-item lightblue">
+          <p>의뢰하기</p>
+        </a>
+      </nav>
+    </section>
+    <footer id="style2">
+      <svg viewBox="0 0 120 28">
+        <defs>
+          <mask id="xxx">
+            <circle cx="7" cy="12" r="40" fill="#fff" />
+          </mask>
+
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="
+                 1 0 0 0 0  
+                 0 1 0 0 0  
+                 0 0 1 0 0  
+                 0 0 0 13 -9"
+              result="goo"
+            />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+          <path
+            id="wave"
+            d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z"
+          />
+        </defs>
+
+        <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2"></use>
+        <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0"></use>
+
+        <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+      </svg>
+
+      <div class="footer-container">
+        <div class="footer-top">
+          <ul>
+            <span class="title">회사주소</span>
+
+            <li>
+              <span class="content">서울특별시 동대문구 휘경동 60</span>
+            </li>
+          </ul>
+          <ul>
+            <span class="title">TEL.</span>
+
+            <li>
+              <span class="content">010-2607-7548</span>
+            </li>
+          </ul>
+          <ul>
+            <span class="title">E-MAIL</span>
+
+            <li>
+              <span class="content">dasawafa@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-wrapper">
+            <a href="" class="logo"
+              ><img src="/images/logo_white.png" alt=""
+            /></a>
+          </div>
+
+          <div class="footer-bottom-wrapper">
+            <p>@ 2023 SUPERMINI.A. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="portfolioModal" class="modal">
+      <div class="modal-content">
+        <span class="close"><i class="far fa-times-circle"></i></span>
+        <div class="modal-images"></div>
+      </div>
+    </div>
+
+    <script src="/js/liToDiv.js"></script>
+    <script src="/js/portfolioModal.js"></script>
+  </body>
+</html>

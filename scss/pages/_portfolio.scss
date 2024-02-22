@@ -1,0 +1,144 @@
+.portfolio {
+  .title-container {
+    text-align: left;
+    padding: vw(100) vw(0);
+    margin-bottom: vw(30);
+    margin-top: vw(75);
+    width: vw(1200);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .menu-container {
+    width: vw(1200);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: vw(20);
+    margin-bottom: vw(55);
+
+    a {
+      position: relative;
+      color: $silver;
+      &::after {
+        content: "";
+        top: vw(30);
+        position: absolute;
+        width: 0;
+        height: 2px; // 선 굵기
+        bottom: -5px; // 텍스트보다 얼마나 아래인지
+        left: 0;
+        background-color: $font;
+        transition: width 0.5s ease-out;
+      }
+
+      &:hover::after,
+      &.active::after {
+        width: 100%;
+      }
+      &:hover,
+      &.active {
+        color: $font;
+      }
+    }
+  }
+  .portfolio-container {
+    width: vw(1200);
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: vw(30);
+    row-gap: vw(25);
+    position: relative;
+    .portfolio-item {
+      height: vw(390);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    .portfolio-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0); /* Transparent background by default */
+      transition: background 0.5s ease; /* Smooth transition for the hover effect */
+    }
+
+    .portfolio-item:hover::before {
+      background: $sube5; /* Transparent black on hover */
+    }
+    .view-more {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $background; /* Example text color */
+      border-radius: vw(20);
+      border: 4px solid $background;
+      padding: vw(10) vw(40);
+      opacity: 0;
+      transition: opacity 0.5s ease; /* Smooth transition for the hover effect */
+    }
+
+    .portfolio-item:hover .view-more {
+      opacity: 1; /* Make the link visible on hover */
+    }
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: vw(1000);
+      height: vw(650);
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: vw(16);
+      padding: vw(20) vw(60) vw(60) vw(60);
+      z-index: 1050; // Ensure it's above other elements
+
+      .close {
+        position: absolute;
+        top: vw(15);
+        right: vw(20);
+        font-size: vw(35);
+        cursor: pointer;
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      .modal-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: vw(20);
+        margin-top: vw(50);
+
+        img {
+          width: vw(429.7);
+          height: vw(250);
+          border-radius: vw(4);
+          object-fit: cover;
+          margin-left: auto;
+          margin-right: auto;
+          box-shadow: vw(4) vw(4) vw(16) $font;
+        }
+      }
+    }
+  }
+}
